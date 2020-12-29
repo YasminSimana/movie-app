@@ -15,13 +15,17 @@ class Actor {
         this.IMDBLink = data.IMDBLink;
     }
 
-    actorAge() {
+    getAge() {
         const ageDiff = new Date().getTime() - this.birthday.getTime();
         const ageDate = new Date(ageDiff);
         const age = Math.abs(ageDate.getFullYear() - 1970);
         
         return age;
-    }   
+    }
+    
+    getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 }
 
 export default Actor;

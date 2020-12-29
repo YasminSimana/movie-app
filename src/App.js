@@ -23,36 +23,36 @@ function App() {
       lastName: "Cox",
       birthday: "1964-06-15",
       image: "https://m.media-amazon.com/images/M/MV5BMTA4OTczNDExNDNeQTJeQWpwZ15BbWU3MDUyNTIzMTM@._V1_UY317_CR7,0,214,317_AL_.jpg",
-      IMDBLink: "https://www.imdb.com/name/nm0001073/"}
-    // },
-    // {
-    //   firstName: "Jennifer",
-    //   lastName: "Aniston",
-    //   birthday: "1969-02-11",
-    //   image: "https://m.media-amazon.com/images/M/MV5BNjk1MjIxNjUxNF5BMl5BanBnXkFtZTcwODk2NzM4Mg@@._V1_UY317_CR3,0,214,317_AL_.jpg",
-    //   IMDBLink: "https://www.imdb.com/name/nm0000098/"
-    // },
-    // {
-    //   firstName: "Jennifer",
-    //   lastName: "Aniston",
-    //   birthday: "1969-02-11",
-    //   image: "https://m.media-amazon.com/images/M/MV5BNjk1MjIxNjUxNF5BMl5BanBnXkFtZTcwODk2NzM4Mg@@._V1_UY317_CR3,0,214,317_AL_.jpg",
-    //   IMDBLink: "https://www.imdb.com/name/nm0000098/"
-    // },
-    // {
-    //   firstName: "Jennifer",
-    //   lastName: "Aniston",
-    //   birthday: "1969-02-11",
-    //   image: "https://m.media-amazon.com/images/M/MV5BNjk1MjIxNjUxNF5BMl5BanBnXkFtZTcwODk2NzM4Mg@@._V1_UY317_CR3,0,214,317_AL_.jpg",
-    //   IMDBLink: "https://www.imdb.com/name/nm0000098/"
-    // },
-    // {
-    //   firstName: "Jennifer",
-    //   lastName: "Aniston",
-    //   birthday: "1969-02-11",
-    //   image: "https://m.media-amazon.com/images/M/MV5BNjk1MjIxNjUxNF5BMl5BanBnXkFtZTcwODk2NzM4Mg@@._V1_UY317_CR3,0,214,317_AL_.jpg",
-    //   IMDBLink: "https://www.imdb.com/name/nm0000098/"
-    // }
+      IMDBLink: "https://www.imdb.com/name/nm0001073/"
+    },
+    {
+      firstName: "David",
+      lastName: "Schwimmer",
+      birthday: "1966-11-02",
+      image: "https://m.media-amazon.com/images/M/MV5BMTQ2Mjg5ODIzNF5BMl5BanBnXkFtZTgwNjIwMjI0ODE@._V1_UX214_CR0,0,214,317_AL_.jpg",
+      IMDBLink: "https://www.imdb.com/name/nm0001710/"
+    },
+    {
+      firstName: "Matthew",
+      lastName: "Perry",
+      birthday: "1969-02-11",
+      image: "https://m.media-amazon.com/images/M/MV5BMTMwODc5NjI3N15BMl5BanBnXkFtZTcwNDEyMTE3Mw@@._V1_UY317_CR17,0,214,317_AL_.jpg",
+      IMDBLink: "https://www.imdb.com/name/nm0001612/"
+    },
+    {
+      firstName: "Lisa",
+      lastName: "Kudrow",
+      birthday: "1963-07-30",
+      image: "https://m.media-amazon.com/images/M/MV5BMTU5OTA0ODcxNl5BMl5BanBnXkFtZTcwMjE3NjQxMw@@._V1_UY317_CR8,0,214,317_AL_.jpg",
+      IMDBLink: "https://www.imdb.com/name/nm0001435/"
+    },
+    {
+      firstName: "Matt",
+      lastName: "LeBlanc",
+      birthday: "1967-07-25",
+      image: "https://m.media-amazon.com/images/M/MV5BODQ0NTI0OTk0M15BMl5BanBnXkFtZTcwMDk2MDg5Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+      IMDBLink: "https://www.imdb.com/name/nm0001455/"
+    }
   ];
   return (
     <div className="App">
