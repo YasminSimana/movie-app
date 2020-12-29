@@ -73,13 +73,13 @@ function ActorsGallery(props) {
         cardsTempData = [];
         const sortSubject = e.target.value;
         console.log(sortSubject)
-        if (sortSubject === "First name"){
+        if (sortSubject === 10){
             actorsData.sort((a, b) => (a.firstName > b.firstName) ? 1 : -1)
         }
-        else if (sortSubject === "Last name"){
+        else if (sortSubject === 20){
             actorsData.sort((a, b) => (a.lastName > b.lastName) ? 1 : -1)
         }
-        else if (sortSubject === "Age"){
+        else if (sortSubject === 30){
             actorsData.sort((a, b) => (a.getAge() > b.getAge()) ? 1 : -1)
         }
         setCardsArr(actorsData);
