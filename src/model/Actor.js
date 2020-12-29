@@ -1,3 +1,11 @@
+//Actor model get an object with strings for the actor details
+//firstName as the actors first name
+//lastName as the actors last name
+//birthday as the actors birthday
+//image of the actor from IMDB page
+//IMDBLink as a link to his/her IMBD page
+//actorAge is a method that calculate the actor age from the birthday and return a number
+
 class Actor {
     constructor (data) {
         this.firstName = data.firstName;
