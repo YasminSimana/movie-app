@@ -1,4 +1,4 @@
-function Actors() {
+function ActorsGallery() {
     return(
         <div>
             Test
@@ -6,4 +6,4 @@ function Actors() {
     )
 }
 
-export default Actors;
+export default ActorsGallery;
