@@ -8,6 +8,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
+import SimpleSelect from "../model/SelectBox";
+import "./ActorsGallery.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,71 +40,51 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//Page component that receives actors items type array
+//Presenr them as cards
+//Allowing fillter by name and sorting by fname, lname and age
+//props = actorsArr - hold array of actors
+//state = filterBy - hold the string we wish to filter by
+//state = sortBy - hold the method we wish to sort by
 function ActorsGallery(props) {
-    const {actorsArr} = props;
     const classes = useStyles();
 
-    let actorsData = [];
-    let cardsTempData = [];
-    for (let i of actorsArr) {
-        let newActor = new Actor(i);
-        actorsData.push(newActor);
-        cardsTempData.push(<ActorCard key={actorsArr.indexOf(i)} actor = {newActor}/>);
+    const {actorsArr} = props;
+    const [filterBy, setFilterBy] = useState("");
+    const [sortBy, setSortBy] = useState("firstName");
+
+    //convert data to presentation!
+
+    const filteredActors = actorsArr.filter(actor=>
+        actor.getFullName().toLowerCase().includes((filterBy).toLowerCase()));
+    
+    if (sortBy !== "age") {
+        filteredActors.sort((a, b) => (a[sortBy].toLowerCase() > b[sortBy].toLowerCase()) ? 1 : -1)
     }
-
-    const [cardsArr, setCardsArr] = useState(cardsTempData);
-    const [age, setAge] = useState('');
-
-    const handleChange = (event) => {
-        setAge(event.target.value);
-      };
-
-    function filterActors(e){
-        setCardsArr([]);
-        cardsTempData = [];
-        for (let i of actorsData) {
-            if (i.getFullName().toLowerCase().includes((e.target.value).toLowerCase())) {
-                cardsTempData.push(<ActorCard key={actorsData.indexOf(i)} actor = {i}/>);
-            }
-        }
-        setCardsArr(cardsTempData);
+    else {
+        filteredActors.sort((a, b) => (a.getAge() > b.getAge()) ? 1 : -1)
     }
-
-    function sortActors(e) {
-        setCardsArr([]);
-        cardsTempData = [];
-        const sortSubject = e.target.value;
-        console.log(sortSubject)
-        if (sortSubject === 10){
-            actorsData.sort((a, b) => (a.firstName > b.firstName) ? 1 : -1)
-        }
-        else if (sortSubject === 20){
-            actorsData.sort((a, b) => (a.lastName > b.lastName) ? 1 : -1)
-        }
-        else if (sortSubject === 30){
-            actorsData.sort((a, b) => (a.getAge() > b.getAge()) ? 1 : -1)
-        }
-        setCardsArr(actorsData);
+    
+    console.log(filteredActors);
+    let cardsArr = [];
+    for (let i of filteredActors){
+        cardsArr.push(<ActorCard key={actorsArr.indexOf(i)} actor={i}/>)
     }
 
     return(
-        <div>            
-            <form className={classes.root} noValidate autoComplete="off">
-                <TextField id="standard-basic" label="Search.." onChange={filterActors}/>
-            </form>
-            <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label" onChange={sortActors}>Sort</InputLabel>
-                <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                onChange={handleChange}
-                >
-                <MenuItem value={10}>First name</MenuItem>
-                <MenuItem value={20}>Last name</MenuItem>
-                <MenuItem value={30}>Age</MenuItem>
-                </Select>
-            </FormControl>
+        <div>    
+            <div className="p-act-gal">
+                <form className={classes.root} noValidate autoComplete="off">
+                    <TextField id="standard-basic" label="Search.." value={filterBy} onChange={e=>setFilterBy(e.target.value)}/>
+                </form>  
+                {/* <SimpleSelect handleSortChange={sortActors}/>     */}
+                <select className="select" value={sortBy} onChange={e=>setSortBy(e.target.value)}>
+                    <option value="firstName">first name</option>
+                    <option value="lastName">last name</option>
+                    <option value="age">age</option>
+                </select>
+                
+            </div>  
             <Box display="flex" justifyContent="center" flexWrap="wrap">
                 {cardsArr}
             </Box>

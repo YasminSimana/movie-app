@@ -1,3 +1,11 @@
 .p-act-gal {
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select {
+    font-family: 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 16px;
 }
