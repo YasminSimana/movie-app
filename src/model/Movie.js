@@ -10,7 +10,7 @@ class Movie {
         if (typeof frstParam === "object" && frstParam !== null) {
             this.name = frstParam.name;
             this.length = frstParam.length;
-            this.poster = new Date(frstParam.poster);
+            this.poster = frstParam.poster;
             this.director = frstParam.director;
             this.starts = frstParam.starts;
         }

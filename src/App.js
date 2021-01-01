@@ -20,12 +20,13 @@ function App() {
     });
   }, []);
 
-  // useEffect(()=>{
-  //   axios.get("movies.json").then(res=>{
-  //     setMoviesArr(res.date.map(plainMovie => new Movie(plainMovie)));
-  //     setIsloading(false);
-  //   });
-  // }, []);
+  useEffect(()=>{
+    axios.get("movies.json").then(res=>{
+      setMoviesArr(res.data.map(plainMovie => new Movie(plainMovie)));
+      setIsloading(false);
+    });
+  }, []);
+  console.log(moviesArr)
 
   return (
     <div className="App">
@@ -33,6 +34,7 @@ function App() {
         {/* {isLoading ? <div>loading...</div> :
         <ActorsGallery actorsArr={actorsArr}/>} */}
         <Movies movies={moviesArr}/>
+       
       </header>
     </div>
   );
