@@ -1,0 +1,9 @@
+[
+    {
+        "name": "The Shawshank Redemption",
+        "length": 142,
+        "poster": "https://www.themoviedb.org/movie/278-the-shawshank-redemption#",
+        "director": "Frank Darabont",
+        "starts": ["Morgan Freeman", "Tim Robbins", "Bob Gunton"]
+    }
+]

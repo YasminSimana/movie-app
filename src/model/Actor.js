@@ -7,12 +7,21 @@
 //actorAge is a method that calculate the actor age from the birthday and return a number
 
 class Actor {
-    constructor (firstName, lastName, birthday, image, IMDBLink) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = new Date(birthday);
-        this.image = image;
-        this.IMDBLink = IMDBLink;
+    constructor (frst, lastName, birthday, image, IMDBLink) {
+        if (typeof frst === "object" && frst !== null) {
+            this.firstName = frst.firstName;
+            this.lastName = frst.lastName;
+            this.birthday = new Date(frst.birthday);
+            this.image = frst.image;
+            this.IMDBLink = frst.IMDBLink;
+        }
+        else {
+            this.firstName = frst;
+            this.lastName = lastName;
+            this.birthday = new Date(birthday);
+            this.image = image;
+            this.IMDBLink = IMDBLink;
+        }
     }
 
     getAge() {
