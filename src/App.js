@@ -13,12 +13,12 @@ function App() {
   const [isLoading, setIsloading] = React.useState(true);
   
 
-  // useEffect(()=>{
-  //   axios.get("actors.json").then(res=>{
-  //     setActorsArr(res.data.map(plainActor => new Actor(plainActor)));
-  //     setIsloading(false);
-  //   });
-  // }, []);
+  useEffect(()=>{
+    axios.get("actors.json").then(res=>{
+      setActorsArr(res.data.map(plainActor => new Actor(plainActor)));
+      setIsloading(false);
+    });
+  }, []);
 
   useEffect(()=>{
     console.log("yasyas")
@@ -35,7 +35,7 @@ function App() {
         {isLoading ? <div>loading...</div> :
         <div>
           <MoviesGallery moviesArr={moviesArr}/>
-          {/* <ActorsGallery actorsArr={actorsArr}/>} */}
+          {/* <ActorsGallery actorsArr={actorsArr}/> */}
         
         </div>}
         

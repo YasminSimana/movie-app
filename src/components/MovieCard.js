@@ -12,10 +12,11 @@ import SkipNextIcon from '@material-ui/icons/SkipNext';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    margin: 10,
   },
   details: {
     display: 'flex',
-    flexDirection: 'column',
+    // flexDirection: 'column',
   },
   content: {
     flex: '1 0 auto',
