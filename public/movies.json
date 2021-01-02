@@ -2,14 +2,14 @@
     {
         "name": "The Shawshank Redemption",
         "length": 142,
-        "poster": "https://www.themoviedb.org/movie/278-the-shawshank-redemption#",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
         "director": "Frank Darabont",
         "starts": ["Morgan Freeman", "Tim Robbins", "Bob Gunton"]
     },
     {
         "name": "Test",
         "length": 142,
-        "poster": "https://www.themoviedb.org/movie/278-the-shawshank-redemption#",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
         "director": "Frank Darabont",
         "starts": ["Morgan Freeman", "Tim Robbins", "Bob Gunton"]
     }
