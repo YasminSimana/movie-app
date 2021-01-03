@@ -18,17 +18,19 @@ function App() {
       setActorsArr(res.data.map(plainActor => new Actor(plainActor)));
       setIsloading(false);
     });
-  }, []);
-
-  useEffect(()=>{
-    console.log("yasyas")
     axios.get("movies.json").then(res=>{
-      console.log("res.data is ", res.data);
       setMoviesArr(res.data.map(plainMovie => new Movie(plainMovie)));
       setIsloading(false);
     });
   }, []);
-  console.log("yyyy", moviesArr)
+
+  // useEffect(()=>{
+  //   axios.get("movies.json").then(res=>{
+  //     setMoviesArr(res.data.map(plainMovie => new Movie(plainMovie)));
+  //     setIsloading(false);
+  //   });
+  // }, []);
+
   return (
     <div className="App">
       <header className="App-header">
